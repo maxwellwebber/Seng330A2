@@ -1,0 +1,117 @@
+\hypertarget{class_treadmill}{}\section{Treadmill Class Reference}
+\label{class_treadmill}\index{Treadmill@{Treadmill}}
+
+
+\hyperlink{class_treadmill}{Treadmill}.  
+
+
+
+
+{\ttfamily \#include $<$Treadmill.\+h$>$}
+
+Inheritance diagram for Treadmill\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_treadmill}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_treadmill_a4f25c125cffee47960cedd2f003c61bd}{Treadmill} (string \+\_\+name)
+\begin{DoxyCompactList}\small\item\em Constructor for treadmill prototype. \end{DoxyCompactList}\item 
+\hyperlink{class_treadmill_a61ab63a87accfd647c2815ca64d0a3a3}{Treadmill} (const \hyperlink{class_treadmill}{Treadmill} \&copy)
+\begin{DoxyCompactList}\small\item\em Constructor for treadmill copies. \end{DoxyCompactList}\item 
+\hypertarget{class_treadmill_a9269ef0174af69f96d65de8f416dca6e}{}\hyperlink{class_treadmill_a9269ef0174af69f96d65de8f416dca6e}{$\sim$\+Treadmill} ()\label{class_treadmill_a9269ef0174af69f96d65de8f416dca6e}
+
+\begin{DoxyCompactList}\small\item\em Destructor for treadmill prototype. \end{DoxyCompactList}\item 
+\hyperlink{class_machine}{Machine} $\ast$ \hyperlink{class_treadmill_a30d83dada44a2d148e8d14dcf9d8d6d6}{clone} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_treadmill}{Treadmill} clone function. \end{DoxyCompactList}\item 
+void \hyperlink{class_treadmill_a0663e09b1573550cd6241d086482e973}{print} ()
+\begin{DoxyCompactList}\small\item\em Print name function. \end{DoxyCompactList}\item 
+void \hyperlink{class_treadmill_a7600b2dee59e7a4f8cd37c270c4ca67f}{change\+Name} (string)
+\begin{DoxyCompactList}\small\item\em Change name function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_treadmill}{Treadmill}. 
+
+This is a derived class of \hyperlink{class_machine}{Machine}. It is used to create a new treadmill. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_treadmill_a4f25c125cffee47960cedd2f003c61bd}{}\index{Treadmill@{Treadmill}!Treadmill@{Treadmill}}
+\index{Treadmill@{Treadmill}!Treadmill@{Treadmill}}
+\subsubsection[{Treadmill(string \+\_\+name)}]{\setlength{\rightskip}{0pt plus 5cm}Treadmill\+::\+Treadmill (
+\begin{DoxyParamCaption}
+\item[{string}]{\+\_\+name}
+\end{DoxyParamCaption}
+)}\label{class_treadmill_a4f25c125cffee47960cedd2f003c61bd}
+
+
+Constructor for treadmill prototype. 
+
+every new treadmill created will be a copy of this. \hypertarget{class_treadmill_a61ab63a87accfd647c2815ca64d0a3a3}{}\index{Treadmill@{Treadmill}!Treadmill@{Treadmill}}
+\index{Treadmill@{Treadmill}!Treadmill@{Treadmill}}
+\subsubsection[{Treadmill(const Treadmill \&copy)}]{\setlength{\rightskip}{0pt plus 5cm}Treadmill\+::\+Treadmill (
+\begin{DoxyParamCaption}
+\item[{const {\bf Treadmill} \&}]{copy}
+\end{DoxyParamCaption}
+)}\label{class_treadmill_a61ab63a87accfd647c2815ca64d0a3a3}
+
+
+Constructor for treadmill copies. 
+
+every new treadmill created will use this constructor. It will copy the attributes of the prototype treadmill. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_treadmill_a7600b2dee59e7a4f8cd37c270c4ca67f}{}\index{Treadmill@{Treadmill}!change\+Name@{change\+Name}}
+\index{change\+Name@{change\+Name}!Treadmill@{Treadmill}}
+\subsubsection[{change\+Name(string)}]{\setlength{\rightskip}{0pt plus 5cm}void Treadmill\+::change\+Name (
+\begin{DoxyParamCaption}
+\item[{string}]{new\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_treadmill_a7600b2dee59e7a4f8cd37c270c4ca67f}
+
+
+Change name function. 
+
+Changes the treadmill\textquotesingle{}s name. 
+
+Implements \hyperlink{class_machine}{Machine}.
+
+\hypertarget{class_treadmill_a30d83dada44a2d148e8d14dcf9d8d6d6}{}\index{Treadmill@{Treadmill}!clone@{clone}}
+\index{clone@{clone}!Treadmill@{Treadmill}}
+\subsubsection[{clone()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Machine} $\ast$ Treadmill\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_treadmill_a30d83dada44a2d148e8d14dcf9d8d6d6}
+
+
+\hyperlink{class_treadmill}{Treadmill} clone function. 
+
+It will return a new copy of the prototype treadmill using the treadmill copy constructor. 
+
+Implements \hyperlink{class_machine}{Machine}.
+
+\hypertarget{class_treadmill_a0663e09b1573550cd6241d086482e973}{}\index{Treadmill@{Treadmill}!print@{print}}
+\index{print@{print}!Treadmill@{Treadmill}}
+\subsubsection[{print()}]{\setlength{\rightskip}{0pt plus 5cm}void Treadmill\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_treadmill_a0663e09b1573550cd6241d086482e973}
+
+
+Print name function. 
+
+It will print the name of the \hyperlink{class_treadmill}{Treadmill}. 
+
+Implements \hyperlink{class_machine}{Machine}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Seng330\+A2/\+Seng330\+A2/Treadmill.\+h\item 
+Seng330\+A2/\+Seng330\+A2/Treadmill.\+cpp\end{DoxyCompactItemize}
