@@ -15,14 +15,15 @@ class Squat_Rack : public Machine
 
 private:
 	string name;
+	string type;
 
 public:
 	Squat_Rack(string _name);
 	Squat_Rack(const Squat_Rack& copy);
 	~Squat_Rack();
 	Machine* clone();
-	void print();
-	void changeName(string);
+	string print();
+	void changeName(string, bool);
 
 };
 

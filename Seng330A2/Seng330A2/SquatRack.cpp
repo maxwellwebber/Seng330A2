@@ -9,6 +9,7 @@ using namespace std;
 
 Squat_Rack::Squat_Rack(string _name) {
 	name = _name;
+	type = "Squat Rack";
 }
 
 /// Constructor for Squat Rack copies.
@@ -16,8 +17,8 @@ Squat_Rack::Squat_Rack(string _name) {
 /// It will copy the attributes of the prototype Squat Rack.
 
 Squat_Rack::Squat_Rack(const Squat_Rack& copy) {
-	cout << "A Squat Rack is being created with the name " << copy.name << endl;
 	name = copy.name;
+	type = copy.type;
 }
 
 /// Squat Rack clone function.
@@ -32,17 +33,18 @@ Machine* Squat_Rack::clone()
 /// Print name function.
 /// It will print the name of the Squat Rack.
 
-void Squat_Rack::print()
+string Squat_Rack::print()
 {
-	cout << "Squat Rack, name: " << name << endl;
+	return "Squat Rack, name: " + name;
 }
 
 /// Change name function.
 /// Changes the Squat rack's name.
 
-void Squat_Rack::changeName(string newName)
+void Squat_Rack::changeName(string newName, bool printit)
 {
-	cout << "The Squat Rack's new name is: " << newName << endl;
+	if (printit)
+		cout << "The Squat Rack's new name is: " << newName << endl;
 	name = newName;
 }
 

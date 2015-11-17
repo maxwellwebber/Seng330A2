@@ -9,6 +9,7 @@ using namespace std;
 
 Treadmill::Treadmill(string _name) {
 	name = _name;
+	type = "Treadmill";
 }
 
 /// Constructor for treadmill copies.
@@ -16,8 +17,8 @@ Treadmill::Treadmill(string _name) {
 /// It will copy the attributes of the prototype treadmill.
 
 Treadmill::Treadmill(const Treadmill& copy) {
-	cout << "A Treadmill is being created with the name " << copy.name << endl;
 	name = copy.name;
+	type = copy.type;
 }
 
 /// Treadmill clone function.
@@ -32,17 +33,18 @@ Machine* Treadmill::clone()
 /// Print name function.
 /// It will print the name of the Treadmill.
 
-void Treadmill::print()
+string Treadmill::print()
 {
-	cout << "Treadmill, name: " << name << endl;
+	return "Treadmill, name: " + name;
 }
 
 /// Change name function.
 /// Changes the treadmill's name.
 
-void Treadmill::changeName(string newName)
+void Treadmill::changeName(string newName, bool printit)
 {
-	cout << "The Treadmill's new name is: " << newName << endl;
+	if (printit)
+		cout << "The Treadmill's new name is: " << newName << endl;
 	name = newName;
 }
 

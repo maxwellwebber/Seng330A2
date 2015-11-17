@@ -9,6 +9,7 @@ using namespace std;
 
 Bike::Bike(string _name) {
 	name = _name;
+	type = "Bike";
 }
 
 /// Constructor for Bike copies.
@@ -16,8 +17,8 @@ Bike::Bike(string _name) {
 /// It will copy the attributes of the prototype Bike.
 
 Bike::Bike(const Bike& copy) {
-	cout << "A Bike is being created with the name " << copy.name << endl;
 	name = copy.name;
+	type = copy.type;
 }
 
 /// Bike clone function.
@@ -32,17 +33,18 @@ Machine* Bike::clone()
 /// Print name function.
 /// It will print the name of the Bike.
 
-void Bike::print()
+string Bike::print()
 {
-	cout << "Bike, name: " << name << endl;
+	return "Bike, name: " + name;
 }
 
 /// Change name function.
 /// Changes the Bike's name.
 
-void Bike::changeName(string newName)
+void Bike::changeName(string newName, bool printit)
 {
-	cout << "The Bike's new name is: " << newName << endl;
+	if (printit)
+		cout << "The Bike's new name is: " << newName << endl;
 	name = newName;
 }
 

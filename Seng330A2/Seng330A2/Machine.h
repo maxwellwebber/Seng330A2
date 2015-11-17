@@ -11,6 +11,6 @@ public:
 	Machine();
 	virtual ~Machine();
 	virtual Machine* clone() = 0;
-	virtual void print() = 0;
-	virtual void changeName(string) = 0;
+	virtual string print() = 0;
+	virtual void changeName(string,bool) = 0;
 };

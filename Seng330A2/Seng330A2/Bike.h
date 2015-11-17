@@ -15,13 +15,14 @@ class Bike : public Machine
 
 private:
 	string name;
+	string type;
 
 public:
 	Bike(string _name);
 	Bike(const Bike& copy);
 	~Bike();
 	Machine* clone();
-	void print();
-	void changeName(string);
+	string print();
+	void changeName(string, bool);
 
 };

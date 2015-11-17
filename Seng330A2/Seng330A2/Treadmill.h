@@ -15,14 +15,15 @@ class Treadmill : public Machine
 
 private:
 	string name;
+	string type;
 
 public:
 	Treadmill(string _name);
 	Treadmill(const Treadmill& copy);
 	~Treadmill();
 	Machine* clone();
-	void print();
-	void changeName(string);
+	string print();
+	void changeName(string, bool);
 
 };
 
