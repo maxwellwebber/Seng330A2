@@ -1,3 +1,7 @@
+HOW TO RUN:
+open up the Seng330A2.vcxproj in the PATH\Seng-330-A2\Seng330A2\Seng330A2 directory with visual studio. next all you should have to do is build and run using debug.
+
+
 SERIALIZATION:
 I spent about 6 hours trying to get Google protocall buffers,
 and about 4 different c++ libraries for JSON working until I 
@@ -10,7 +14,7 @@ CLASS_TYPE1, name: CLASS_NAME1
 CLASS_TYPE2, name: CLASS_NAME2
 CLASS_TYPE3, name: CLASS_NAME3
 ect.
-
+These classes are loaded with a load function also in seng330A2.cpp.
 
 DOXYGEN:
 you can see the doxygen documentation in the html folder. just
@@ -21,7 +25,7 @@ for the google testing framework I think I managed to install
 it correctly however I could not manage to sucsessfully run any
 tests on any of the objects I created. These are the errors It 
 gave me when I tried to run the commented out code in the file
-unittest_A@.cpp:
+unittest_A2.cpp:
 
 LNK1120	2 unresolved externals	
 
@@ -31,13 +35,13 @@ LNK2019	unresolved external symbol
 LNK2019	unresolved external symbol 
 "public: class Machine * __thiscall MachineFactory::createMachine(enum MACHINE_TYPE)" (?createMachine@MachineFactory@@QAEPAVMachine@@W4MACHINE_TYPE@@@Z) referenced in function "private: virtual void __thiscall testTreadmill_treadmillPrintTest_Test::TestBody(void)" (?TestBody@testTreadmill_treadmillPrintTest_Test@@EAEXXZ)	
 
-to prove I can run unittests on simpler cases like function
+To prove I can run unittests on simpler cases like function
 with simple return values, I included a header file named
-Header1.h that has some simple function that can be tested
+Header1.h that has some simple functions that can be tested
 using googles testing framework. the tests are included in a
 file named unittest_A2.cpp.
 
-To test it go to the Solution Explorer Tab on the right. then
+To run them go to the Solution Explorer Tab on the right. then
 right click the unittest_A2 and press "Debug->Start New
 Instance". you might need to put a breakpoint on one of the
 tests so it doesent just run and close.
