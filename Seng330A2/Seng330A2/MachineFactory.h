@@ -1,7 +1,7 @@
 #pragma once
 #include "Machine.h"
-#include "Bike.h"
 #include "Treadmill.h"
+#include "Bike.h"
 #include "SquatRack.h"
 
 using namespace std;

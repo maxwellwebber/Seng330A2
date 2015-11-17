@@ -17,6 +17,7 @@ using namespace std;
 const int MAX_GYM_SIZE = 64;
 const string INVALID_SELECTION = "INVALID_STRING";
 
+// function for saving the classes to a file named savestate.txt
 void save(Machine** machineArray, int front) {
 	ofstream saveF;
 	saveF.open("savestate.txt");
@@ -31,6 +32,7 @@ void save(Machine** machineArray, int front) {
 	saveF.close();
 }
 
+// function for loading the classes from a file named savestate.txt
 int load(Machine** machineArray, MachineFactory* theMachineFactory) {
 
 	ifstream loadF;
@@ -68,19 +70,21 @@ int load(Machine** machineArray, MachineFactory* theMachineFactory) {
 	return front;
 }
 
-int main() {
 
+int main() {
+	// create a new machine factory to create new machines from
 	MachineFactory* theMachineFactory = new MachineFactory();
 	string inStr;
+	// array to hold machines currently allows for 64
 	Machine** machineArray = new Machine*[MAX_GYM_SIZE];
-	int front = load(machineArray, theMachineFactory);
+	// inistialize array index and load in machines from previous runs of the program
+	int front = load(machineArray, theMachineFactory); // front keeps track of the index where the next element needs to be inserted
 
+	// main program logic
 	while (inStr != "q") {
 
 		cout << "would you like to create a new machine (c)? Print the list of machines (p)? or Quit (q)? ";
 		cin >> inStr;
-
-
 
 		if (inStr == "c") {
 			string newName, selection;
@@ -88,6 +92,7 @@ int main() {
 			MACHINE_TYPE type;
 
 			selection = INVALID_SELECTION;
+			// if the selection was valid
 			while (selection == INVALID_SELECTION) {
 				cout << "Would you like to create a Treadmill (t), Bike (b) or Squat Rack (s)?";
 				cin >> selection;
@@ -99,19 +104,22 @@ int main() {
 					selection = INVALID_SELECTION;
 				}
 			}
-
+			// this is where a new machine is created from cloning a prototype in
+			// machineFactory
 			new_machine = theMachineFactory->createMachine(type);
-			cout << "Wachine created" << endl;
+			cout << "Machine created" << endl;
 			cout << "what would you like to name the Machine?" << endl << "name: ";
 			cin.ignore(2, '\n'); // removes the /n char from earlier from the input buffer
 			getline(cin, newName);
+			// changes the name of the machine that the prototype had to somthing
+			// the user specifys
 			new_machine->changeName(newName, true);
 			machineArray[front] = new_machine;
 			front++;
 
-
-
 		} else if (inStr == "q") {
+			// saves the classes in savestate.txt
+			// before quitting
 			save(machineArray,front);
 			cout << "quiting" << endl;
 
